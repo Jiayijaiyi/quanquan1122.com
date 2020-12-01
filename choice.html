@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order & Delivery</title>
 
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-
-   <style> 
-    body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
-            background-blend-mode: lighten ;
-            
-            font-weight:bold;
-            text-align: center;
-            margin:30px;
-            font-family: fantasy, serif ;
-            color: red;
-            background-color: #fed8b1;
+    <link rel="stylesheet" href="style.css">
+    <style>
+        fieldset {
+            width: 50%;
+            margin: 0 auto;
         }
 
 
-    h1{text-align: center;}
+        input[type=text],
+        input[type=email] {
+            /* width: 100%; */
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-   #line{text-decoration: line-through;}
+        .block {
+            width: 45%;
+            margin: 0 auto;
+        }
 
-    button{padding: 10px; margin-left: auto; margin-right: auto;}
+        .block input[type=text] {
+            width: 100%;
+        }
 
-    form{text-align: center;}
-    
-    fieldset{margin-left: 400px;margin-right: 100px;}
+        input[type=checkbox] {
+            /* opacity: 0; */
+            width: 1em;
+            height: 1em;
+        }
 
-    a{text-decoration: none;}
+        
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181087744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    ul#navigation { list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 25%;
-            position: fixed;
-            height: 100%;
-            background-color: transparent;}
-
-       </style>
+        gtag('config', 'UA-181087744-1');
+    </script>
 
 
-   
 
 </head>
+
 <body>
     <h1><img src="images/star.png" height=40>Make Your choice!<img src="images/star.png" height=40></h1>
     <ul id="navigation">
-        <li><a href=sitemap.html>Jiayi's Choice</a></li>
+        <li><a href="index.html">Jiayi's Choice</a></li>
         <br>
         <li>Classic. </li>
         <li>Authentic.</li>
@@ -61,65 +72,104 @@
         <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
         <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
         <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
-       
-        
+        <li><img src="images/star.png" height=20><a href=sitemap.html>Site Map</a></li>
+
+
     </ul>
 
-    <form method="post" action="mailto:szhang4@babson.edu">
-        <fieldset>
+    <form method="post" onsubmit="onSubmit(event);">
+        <fieldset style="text-align: left;">
             <legend>Which is your Favorite?</legend>
-            <input type="checkbox" id="food1" name="order" value="Mapo Tofu">  
-        <label for="food1">Mapo Tofu</label>
-        <br>
-        <label>Why:</label>&emsp;<input type="value" placeholder="enter your reason" maxlength="2"></input>
+            <div class="block">
+                <input type="checkbox" id="food1" name="order" value="Mapo Tofu">
+                <label for="food1">Mapo Tofu</label>
+                <br>
+                <input type="text" name="reason" placeholder="enter your reason" maxlength="2"></input>
 
+                <pre></pre>
+
+                <input type="checkbox" id="food2" name="order" value="Dim Sum">
+                <label for="food2">Dim Sum</label>
+                <br>
+                <input type="text" name="reason" placeholder="enter your reason"></input>
+
+                <pre></pre>
+
+                <input type="checkbox" id="food3" name="order" value="Xiao Longbao">
+                <label for="food3">Peking Duck</label>
+                <br>
+                <input type="text" name="reason" placeholder="enter your reason"></input>
+
+                <pre></pre>
+
+                <input type="checkbox" id="food4" name="order" value="Peking Duck">
+                <label for="food4">Xiao longbao</label>
+                <br>
+                <input type="text" name="reason" placeholder="enter your reason"></input>
+            </div>
             <pre></pre>
 
-            <input type="checkbox" id="food2" name="order" value="Dim Sum">  
-        <label for="food2">Dim Sum</label>
+
+        </fieldset>
+
+
         <br>
-        <label>Why:</label>&emsp;<input type="value" placeholder="enter your reason"></input>
-
-            <pre></pre>
-
-            <input type="checkbox" id="food3" name="order" value="Xiao Longbao">  
-        <label for="food3">Peking Duck</label>
         <br>
-        <label>why:</label>&emsp;<input type="value" placeholder="enter your reason"></input>
-
-            <pre></pre>
-
-            <input type="checkbox" id="food4" name="order" value="Peking Duck">  
-        <label for="food4">Xiao longbao</label>
         <br>
-        <label>why:</label>&emsp;<input type="value" placeholder="enter your reason"></input>
-
-            <pre></pre>
-
-
-       </fieldset>
-
- 
-     <br>
-     <br>
-     <br>
 
 
         <fieldset>
             <legend>Your Contact Information(* is requried):</legend>
             <pre></pre>
-            <label>E-mail Address:</label>&emsp;<input type="text" placeholder="Enter your email here"></input>
+            <label>E-mail Address:</label>&emsp;
+            <input id="email" type="email" placeholder="Enter your email here"></input>
         </fieldset>
 
- 
+
 
         <br>
         <br>
 
-        <button>Submit Your Choice</button>
+        <button class="btn" style="padding: 5px 10px;" type="submit">Submit Your Choice</button>
     </form>
 
 
-    
+    <script>
+        function onSubmit(event) {
+            event.preventDefault();
+            let chooses = document.getElementsByName("order")
+            let inputs = document.getElementsByName("reason")
+            console.log(chooses)
+            let check = false;
+            for (let i = 0; i < chooses.length; i++) {
+                if (chooses[i].checked && inputs[i].value === '') {
+                    alert("Please enter your reason for the chosen")
+                }
+                console.log(chooses[i].checked)
+                check = check || chooses[i].checked;
+            }
+            // console.log(check)
+            if (!check) {
+                alert("No food has been chosen")
+                return false;
+            }
+
+            let email = document.getElementById("email").value;
+            if (email == "") {
+                alert("Enter your email");
+                return false;
+            }
+
+            let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+            if (!reg.test(email)) {
+                alert("Incorrect email format");
+                return false;
+            };
+
+            alert("You has submitted you choice!!")
+            return false;
+        }
+    </script>
 </body>
+
 </html>

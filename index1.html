@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Jiayi Li">
+    <meta name="keywords" content="Jiayi, Babson, webtech, student">
+    <meta name="author" content="Jiayi Li">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Technologies - Jiayi Li</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        body {
+            background-color: #ccffff;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        h1 {
+            font-family: 'Serif';
+            color: black;
+            text-align: center;
+            text-shadow: 4px 4px 4px #aaa;
+            /* adds a shadow to the selected text  */
+        }
+
+        h2 {
+            font-family: 'Tangerine', serif;
+            color: #808080;
+            text-align: left;
+            font-size: 22pt;
+
+        }
+
+        h3 {
+            font-family: cursive;
+            color: rgb(0, 0, 255);
+            text-align: left;
+
+
+        }
+
+        p {
+            text-indent: 30px;
+            font-family: Sans-serif;
+        }
+
+        img {
+
+            /* img should be on the right for consistency in format  */
+            margin: 30px;
+
+        }
+
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181087744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-181087744-1');
+    </script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <h1>All about Jiayi:)</h1>
+    <h3>Contact Information</h3>
+    <p><a href="https://github.com/Jiayijaiyi">Github Profile Page</a></p>
+    <p><a href="jli6@babson.edu">Email Address</a></p>
+    <hr>
+
+    <h3>Quick Links</h3>
+    <p><a href="#About Me">About Me</a></p>
+    <p><a href="#My Interests">My Interests</a></p>
+
+    <h2><a id="About Me">About Me</a></h2>
+    <p>I chose <a href="https://Babson.edu">Babson</a> because it's a famous college.</p>
+
+    <h2>Where I'm From</h2>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of shanghai
+            var shanghai = { lat: 31.2304, lng: 121.4737 };
+            // The map, centered at shanghai
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 4, center: shanghai });
+            // The marker, positioned at shanghai
+            var marker = new google.maps.Marker({ position: shanghai, map: map });
+        }
+    </script>
+    <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_N0mg_qJh8qz7J6wTn0w9h40O2_IBq3M&callback=initMap">
+        </script>
+
+    <h2><a id="My Interests">My Interests</a></h2>
+    <!-- a summary of my interests -->
+    <img src="images/luxun.jpg" alt="quanquan" height="300" width="300" title="Quanquan">
+
+    <!-- not a real pic of me, but should suffice-->
+    <p>My favorite sport is <a href="https://en.wikipedia.org/wiki/Lacrosse"><b>Lacrosse</b></a></p>
+    <hr>
+    <br>
+    <br>
+    <!-- adding some br to separate content-->
+    <a href="sitemap.html">My Work in WebTech</a>
+
+    <p><a href="#top">Go back to top</a></p>
+
+</body>
+
+</html>

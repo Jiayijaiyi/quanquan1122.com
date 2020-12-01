@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
 
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-
-    <style> 
-    body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
-            background-blend-mode: lighten ;
-            
-            font-weight:bold;
-            text-align: center;
-            margin:30px;
-            font-family: fantasy, serif ;
-            color: red;
-            background-color: #fed8b1;
+    <link rel="stylesheet" href="style.css">
+    <style>
+        fieldset {
+            width: 50%;
+            margin: 0 auto;
+            /* height: 400px; */
         }
 
-    ul{list-style-type:none;}
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181087744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    ul#navigation { list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 25%;
-            position: fixed;
-            height: 100%;
-            background-color: transparent;}
-
-    a{text-decoration: none;}
-   </style>
+        gtag('config', 'UA-181087744-1');
+    </script>
 </head>
+
 <body>
-    <h1><img src="images/star.png" height=40>Contact Me  for Any Feedback!<img src="images/star.png" height=40></h1>
+    <h1><img src="images/star.png" height=40>Contact Me for Any Feedback!<img src="images/star.png" height=40></h1>
 
     <ul id="navigation">
-        <li><a href=sitemap.html>Jiayi's Choice</a></li>
+        <li><a href="index.html">Jiayi's Choice</a></li>
         <br>
         <li>Classic. </li>
         <li>Authentic.</li>
@@ -48,26 +46,60 @@
         <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
         <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
         <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
-        
-        
-    </ul>
-   
-    <p>
-    Contact Information:
-    <ul>
-        <li>Email: <a href="mailto:jli6@babson.edu">Click here</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/Rinchan_jl/">Jiayi's Insta</a></li>
-    </ul> 
+        <li><img src="images/star.png" height=20><a href=sitemap.html>Site Map</a></li>
 
-    <form><label for="comments">Give me a direct message here!</label>
-            <br>
-            <textarea placeholder="We appreciate your feedback!" rows="5" cols="60"></textarea>
-        <pre></pre>
-        <pre>
-            <button>Submit</button>
-        </pre>
+
+    </ul>
+    <fieldset>
+        <legend>
+            <h3> Contact Information:</h3>
+        </legend>
+
+
+        <ul style="text-align: left;">
+            <li>Email: <a href="mailto:jli6@babson.edu">Click here</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/Rinchan_jl/">Jiayi's Insta</a></li>
+        </ul>
+        <hr />
+        <h3 id="message">Give me a direct message here!</h3>
+        <form id="feedbackform" onsubmit="onSubmit(event)">
+           
+            <input type="text" style="width: 90%;" id="email" placeholder="Your email" />
+            <textarea id="feedback" style="width: 90%;" placeholder="We appreciate your feedback!" rows="5"
+                cols="60"></textarea>
+            <br />
+
+            <button style="padding:5px 10px" type="submit" class="btn">Submit</button>
+            <button class="btn" style="padding:5px 10px" type="reset">Reset</button>
         </form>
-    </p>
-    
+
+    </fieldset>
+    <script>
+        function onSubmit() {
+            event.preventDefault();
+            let feedback = document.getElementById("feedback");
+            let email = document.getElementById("email");
+            let message = document.getElementById("message");
+            let feedbackform = document.getElementById("feedbackform");
+            
+            if (feedback.value == "" || email.value == "") {
+                alert("Please complete form before sumbitting");
+                return false;
+            }
+
+
+            let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+            if (!reg.test(email.value)) {
+                alert("Incorrect email format");
+                return false;
+            };
+
+            feedbackform.style.display = 'none';
+         
+            message.innerText = 'Thank you for sending a feedback!!'
+            return false;
+        }
+    </script>
 </body>
+
 </html>

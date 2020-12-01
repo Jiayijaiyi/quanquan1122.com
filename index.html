@@ -1,126 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This comprises of 4 of the most classic Chinese dishes(my favorite)">
+    <meta name="keywords" content="Jiayi,food,chinese,dishes">
+    <meta name="author" content="Jiayi">
     <title>About</title>
-
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-
+    <link rel="shortcut icon" type="image/jpg" href="./favicon.png" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
-            background-blend-mode: lighten ;
-            
-            font-weight:bold;
-            text-align: center;
-            margin:30px;
-            font-family: fantasy, serif ;
-            color: red;
-            background-color: #fed8b1;
-        }
-        
-        
-
-
-        #description {
-            font-size: 12px;
-        }
-
-
-
-        h3 {
-            font-weight: bolder;
-        }
-        h1{text-align: center;}
-
-        a{text-decoration: none;}
-
-        ul#navigation { list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 25%;
-            position: fixed;
-            height: 100%;
-            background-color: transparent;}
-        
-        ul#story{ margin-right:50px;
+        ul#story {
+            margin-right: 50px;
             list-style-type: none;
+        }
+
+        img#Jiayi {
+            margin-left: 50x;
+            border: 5px solid sienna;
+            border-style: dotted
+        }
+
+        .main {
+            padding: 30px;
+            margin-left: 300px;
+            border: 5px solid sienna;
+            border-style: dotted
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .slides {
+            display: none;
+            /* max-height: 300px; */
+        }
+
+        .slides img {
+            height: 300px;
+        }
+
+
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
             }
 
-        img#Jiayi{margin-left:50x;border: 5px solid sienna;border-style:dotted}
+            to {
+                opacity: 1
+            }
+        }
 
-        div{padding: 30px; margin-left:300px; border: 5px solid sienna;border-style:dotted}
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181087744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-181087744-1');
+    </script>
 </head>
+
 <body>
-    <h1><img src="images/star.png" height=40>Jiayi's Choice<img src="images/star.png" height=40></h1>
+    <h1><img src="images/star.png" width=40 height="40">
+        <span style="cursor: pointer;" onclick="changeStyle(event)">Jiayi's Choice</span>
+        <img src="images/star.png" width=40 height="40"></h1>
 
     <ul id="navigation">
-        <li><a href=sitemap.html>Jiayi's Choice</a></li>
+        <li><a href="index.html">Jiayi's Choice</a></li>
         <br>
         <li>Classic. </li>
         <li>Authentic.</li>
         <li>Delicious.</li>
-       
+
         <br>
-        <li><img src="images/star.png" height=20><a href=index.html>About</a></li>
+        <li><img src="images/star.png" height=20><a class="actived" href=index.html>About</a></li>
         <li><img src="images/star.png" height=20><a href=menu.html>Choice 2020</a></li>
         <li><img src="images/star.png" height=20><a href=choice.html>Make your choice!</a></li>
         <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
         <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
         <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
-        
+        <li><img src="images/star.png" height=20><a href=sitemap.html>Site Map</a></li>
+
     </ul>
 
-    <div>
+    <div class="main">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-    <ul id="story">
+            <!-- Full-width images with number and caption text -->
+            <div class="slides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://www.maangchi.com/wp-content/uploads/2019/09/mapotofu.jpg" style="width:100%">
+                <div class="text">Mapo Tofu</div>
+            </div>
 
-        <li> &emsp;&emsp; This comprises of 4 of the most classic Chinese dishes(my favorite), with information on its history, ingredients and tutorials on how to make it.
-        </li>
-        <br>
-        <li>
-        &emsp;&emsp; The goal to reveal the history and cultural background behind the Chinese cuisine. While there are countless tutorials on every possible dish in every cuisine, few know why the food came into place. Especially in China, where food is an essential part of the its culture, there should similarly be a deeper understanding on what we are putting in to our mouth.
-        Furthermore, with COVID and quarantine, Jiayi's hunger for delicious food is stronger than ever.
-        </li>
+            <div class="slides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src=" https://cdn.cnn.com/cnnnext/dam/assets/160325033254-hk-dim-sum-fook-lam-moon.jpg"
+                    style="width:100%">
+                <div class="text">Dim Sum</div>
+            </div>
 
-        <br>
-        <li>&emsp;&emsp;This website is made for is anyone who is interested in the Chinese dishes. Whether they intend to make them, learn about them, the website aim to educate its audience without them even realizing.
+            <div class="slides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/46/96/12/ZjK6w7d3Soa4y9kLqsOr_DIN_TAI_FUNG_STYLE_XIAO_LONG_BAO_SOUP_DUMPLINGS_025.jpg"
+                    style="width:100%">
+                <div class="text">Xiao Longbao</div>
+            </div>
 
-        </li>
+            <div class="slides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgEbbQU1MZSxD7n24kS5yYad8axXNzoJEPNg&usqp=CAU"
+                    style="width:100%">
+                <div class="text">Peking Duck</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+        </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <ul id="story">
 
-        <br>
+            <li> &emsp;&emsp; This comprises of 4 of the most classic Chinese dishes(my favorite), with information on
+                its history, ingredients and tutorials on how to make it.
+            </li>
+            <br>
+            <li>
+                &emsp;&emsp; The goal to reveal the history and cultural background behind the Chinese cuisine. While
+                there are countless tutorials on every possible dish in every cuisine, few know why the food came into
+                place. Especially in China, where food is an essential part of the its culture, there should similarly
+                be a deeper understanding on what we are putting in to our mouth.
+                Furthermore, with COVID and quarantine, Jiayi's hunger for delicious food is stronger than ever.
+            </li>
 
-        <li>Picture of Jiayi</li>
+            <br>
+            <li>&emsp;&emsp;This website is made for is anyone who is interested in the Chinese dishes. Whether they
+                intend to make them, learn about them, the website aim to educate its audience without them even
+                realizing.
+
+            </li>
+
+            <br>
+
+            <li>Picture of Jiayi</li>
 
         </ul>
 
-        <img id="jiayi" src="https://www.weekinchina.com/app/uploads/2019/12/Confucius.jpg" height=300 title="chef's picture">
+        <br>
+
+
+        <img id="jiayi" src="https://www.weekinchina.com/app/uploads/2019/12/Confucius.jpg" height=300
+            title="chef's picture">
 
     </div>
 
     <script>
-       let jiayi = document.getElementById("jiayi");
+        let jiayi = document.getElementById("jiayi");
         let currentRotate = 0;
-        jiayi.onclick = function () {
+        jiayi.onclick = function() {
             currentRotate = currentRotate + 90;
             this.style.transform = 'rotate(' + currentRotate + 'deg)';
         };
 
+        jiayi.onmouseover = function() {
+            this.src = "https://picsum.photos/300/300?random=" + new Date().getTime()
+        }
+
+        jiayi.onmouseout = function() {
+            this.src = "https://picsum.photos/300/300?random=2" + new Date().getTime()
+        }
+        function changeStyle(e) {
+            e.target.style.color = getRandomColor();
+        }
+
+        function getColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
 
         let ps = document.getElementsByClassName("p");
         for (let i = 0; i < ps.length; i++) {
-            ps[i].onmouseover = function () {
+            ps[i].onmouseover = function() {
                 this.style.fontSize = "30px";
             };
-            ps[i].onmouseout = function () {
+            ps[i].onmouseout = function() {
                 this.style.fontSize = "15px";
             };
         }
 
+        // Next/previous controls
+        function plusSlides(n) {
+            changeSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            changeSlides(slideIndex = n);
+        }
+
+        function changeSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
     </script>
 
-    
+
 </body>
+
 </html>
