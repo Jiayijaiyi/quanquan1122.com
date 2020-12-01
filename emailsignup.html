@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Coummunity</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <style>
+
+body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
+            background-blend-mode: lighten ;
+            font-family: cursive;
+            font-weight:bold;
+            text-align: center;
+            margin:30px;}
+        
+        body {
+        font-family: fantasy, serif ;
+        color: red;
+        background-color: #fed8b1;
+        }
+
+
+        #description {
+            font-size: 12px;
+        }
+
+
+
+        h3 {
+            font-weight: bolder;
+        }
+        h1{text-align: center;}
+
+        a{text-decoration: none;}
+
+        ul#navigation { list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            position: fixed;
+            height: 100%;
+            background-color: transparent;}
+
+    a{text-decoration: none;}
+
+    fieldset {
+            margin-left: 400px;
+            margin-right: 400px;
+            height: 400px;
+        }
+
+        .btnReg {
+            width: 90px;
+            margin: 0 auto;
+            height: 35px;
+            line-height: 35px;
+            line-height: 35px;
+            cursor: pointer;
+            background-color: #00ff21;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <h1><img src="images/star.png" height=40>Welcome to Join Jiayi Email List!<img src="images/star.png" height=40></h1>
+    
+
+    <ul id="navigation">
+        <li><a href=sitemap.html>Jiayi's Choice</a></li>
+        <br>
+        
+        <br>
+        <li><img src="images/star.png" height=20><a href=index.html>About</a></li>
+        <li><img src="images/star.png" height=20><a href=menu.html>Choice 2020</a></li>
+        <li><img src="images/star.png" height=20><a href=choice.html>Make your choice!</a></li>
+        <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
+        <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
+        <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
+        
+        
+    </ul>
+   
+
+    <form method="post" action="mailto:szhang4@babson.edu">
+        <fieldset>
+            <legend><h3>Your Information:</h3></legend>
+            <br>
+            <label>Name:</label>&emsp;<input type="text" placeholder="Enter your name here"></input>
+            <pre></pre>
+            <label>Email:</label>&emsp;<input type="text" placeholder="Enter your email here"></input>
+            <pre></pre>
+                <label for="resource">How do you know about this website?</label>
+            <select name="resource">
+                <option>Online</option>
+                <option>From Friend</option>
+                <option>Self-explored</option>
+                <option>Other</option> 
+            </select>
+ 
+            <br /><br />
+            <input checked id="che" type="checkbox" />
+            <label for="che">Sign me up for email updates</label>
+            <div class="btnReg" id="btnReg">Subscribe!</div>
+            <h2>Thank you for Subscribing!</h2>
+            
+        </fieldset>
+
+        <script>
+            document.getElementById("btnReg").addEventListener("click", function () {
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                if (name == "" || email == "") {
+                    alert("Please complete");
+                    return;
+                }
+
+                let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+                if (!reg.test(email)) {
+                    alert("Incorrect email format");
+                    return;
+                };
+
+                alert("Congratulations on your successful registration");
+
+            });
+
+        </script>
+</body>
+</html>

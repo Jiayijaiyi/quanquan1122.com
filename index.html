@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <style>
+        body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
+            background-blend-mode: lighten ;
+            
+            font-weight:bold;
+            text-align: center;
+            margin:30px;
+            font-family: fantasy, serif ;
+            color: red;
+            background-color: #fed8b1;
+        }
+        
+        
+
+
+        #description {
+            font-size: 12px;
+        }
+
+
+
+        h3 {
+            font-weight: bolder;
+        }
+        h1{text-align: center;}
+
+        a{text-decoration: none;}
+
+        ul#navigation { list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            position: fixed;
+            height: 100%;
+            background-color: transparent;}
+        
+        ul#story{ margin-right:50px;
+            list-style-type: none;
+            }
+
+        img#Jiayi{margin-left:50x;border: 5px solid sienna;border-style:dotted}
+
+        div{padding: 30px; margin-left:300px; border: 5px solid sienna;border-style:dotted}
+    </style>
+</head>
+<body>
+    <h1><img src="images/star.png" height=40>Jiayi's Choice<img src="images/star.png" height=40></h1>
+
+    <ul id="navigation">
+        <li><a href=sitemap.html>Jiayi's Choice</a></li>
+        <br>
+        <li>Classic. </li>
+        <li>Authentic.</li>
+        <li>Delicious.</li>
+       
+        <br>
+        <li><img src="images/star.png" height=20><a href=index.html>About</a></li>
+        <li><img src="images/star.png" height=20><a href=menu.html>Choice 2020</a></li>
+        <li><img src="images/star.png" height=20><a href=choice.html>Make your choice!</a></li>
+        <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
+        <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
+        <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
+        
+    </ul>
+
+    <div>
+
+    <ul id="story">
+
+        <li> &emsp;&emsp; This comprises of 4 of the most classic Chinese dishes(my favorite), with information on its history, ingredients and tutorials on how to make it.
+        </li>
+        <br>
+        <li>
+        &emsp;&emsp; The goal to reveal the history and cultural background behind the Chinese cuisine. While there are countless tutorials on every possible dish in every cuisine, few know why the food came into place. Especially in China, where food is an essential part of the its culture, there should similarly be a deeper understanding on what we are putting in to our mouth.
+        Furthermore, with COVID and quarantine, Jiayi's hunger for delicious food is stronger than ever.
+        </li>
+
+        <br>
+        <li>&emsp;&emsp;This website is made for is anyone who is interested in the Chinese dishes. Whether they intend to make them, learn about them, the website aim to educate its audience without them even realizing.
+
+        </li>
+
+        <br>
+
+        <li>Picture of Jiayi</li>
+
+        </ul>
+
+        <img id="jiayi" src="https://www.weekinchina.com/app/uploads/2019/12/Confucius.jpg" height=300 title="chef's picture">
+
+    </div>
+
+    <script>
+       let jiayi = document.getElementById("jiayi");
+        let currentRotate = 0;
+        jiayi.onclick = function () {
+            currentRotate = currentRotate + 90;
+            this.style.transform = 'rotate(' + currentRotate + 'deg)';
+        };
+
+
+
+        let ps = document.getElementsByClassName("p");
+        for (let i = 0; i < ps.length; i++) {
+            ps[i].onmouseover = function () {
+                this.style.fontSize = "30px";
+            };
+            ps[i].onmouseout = function () {
+                this.style.fontSize = "15px";
+            };
+        }
+
+    </script>
+
+    
+</body>
+</html>

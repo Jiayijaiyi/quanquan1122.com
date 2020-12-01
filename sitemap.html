@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiayi's Website - All about the best Chinese foods!</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <style>
+        body{background-image: url("https://img2.pngio.com/asian-fast-food-png-clip-art-transparent-cartoon-free-cliparts-chinese-restaurant-png-920_867.png");
+                background-blend-mode: lighten ;
+                
+                font-weight:bold;
+                text-align: center;
+                margin:30px;
+                font-family: fantasy, serif ;
+                color: red;
+                background-color: #fed8b1;
+            }
+
+
+        ul { list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            position: fixed;
+            height: 100%;
+            background-color: transparent;}
+           
+            
+        
+        a{text-decoration: none;}
+
+        table{margin-left: 300px; margin-right: 300px;}
+
+        table,td,th{border: 5px solid sienna;border-style:dotted}
+
+
+    </style>
+
+    
+</head>
+<body>
+    <h1><img src="images/star.png" height=40>Welcome to Jiayi's Web Page!<img src="images/star.png" height=40></h1>
+    <p>
+        <ul>
+            <li><a href=sitemap.html>Jiayi's Choice</a></li>
+            <br>
+            <li>Classic. </li>
+            <li>Authentic.</li>
+            <li>Delicious.</li>
+            <br>
+            <li><img src="images/star.png" height=20><a href=index.html>About</a></li>
+            <li><img src="images/star.png" height=20><a href=menu.html>Choice 2020</a></li>
+            <li><img src="images/star.png" height=20><a href=choice.html>Make your choice!</a></li>
+            <li><img src="images/star.png" height=20><a href=location.html>Where's Jiayi?</a></li>
+            <li><img src="images/star.png" height=20><a href=emailsignup.html>Subscribe</a></li>
+            <li><img src="images/star.png" height=20><a href=Contactus.html>Contact Me</a></li>
+            
+            
+        </ul>
+
+        <table>
+            <tr>
+                <td colspan="2"><img src="https://healthynibblesandbits.com/wp-content/uploads/2019/10/Vegetarian-Mapo-Tofu-FF-720x720.jpg" width=300 height=200 ></td>
+                <td rowspan="2"><img id="my" src="https://i.pinimg.com/originals/16/b9/b1/16b9b12fcf01a94921f84f2fc3dd5c97.jpg"height=355></td>
+            </tr>
+            <tr>
+                <td><img src="https://d2wtgwi3o396m5.cloudfront.net/recipe/d6096843-b41f-481b-831a-1ad02240fe6a.jpg" height=150></td>
+                <td><img src="https://thewoksoflife.com/wp-content/uploads/2015/11/peking-duck-recipe-11-1-500x500.jpg" height=150></td>
+            </tr>
+        </table>
+    </p>
+
+    <h3>"All intellectual property at this website is in the public domain or is the property of the site-owner."<pre></pre>
+        "I, Jiayi Li, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and observed all the restrictions and limitations specified therein."
+    </h3>
+    
+    <br>
+
+    <script>
+        alert("Welcome to Jiayi's Choice web sitemap!");
+
+
+        let flag = false;
+        let startSize = 385;
+        document.getElementById("my").addEventListener("mouseover", function () {
+            if (flag == false) {
+                flag = true;
+                let time1 = setInterval(function () {
+                    document.getElementById("my").style.height = startSize + "px";
+                    startSize+=3;
+                    if (startSize > 500) {
+                        window.clearInterval(time1);
+                        flag = false;
+                    }
+                }, 60);
+            }
+        });
+
+
+        document.getElementById("my").addEventListener("mouseout", function () {
+                let time2 = setInterval(function () {
+                    document.getElementById("my").style.height = startSize + "px";
+                    startSize -= 3;
+                    if (startSize <=385) {
+                        window.clearInterval(time2);
+                    }
+                }, 20);
+        });
+        
+    </script>
+
+</body>
+</html>
